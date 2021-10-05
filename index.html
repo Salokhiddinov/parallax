@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Projects</a></li>
+            <li><a href="#" class="nav-link">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <img src="img/1.png" data-speed="-5" alt="shape" class="layer">
+        <img src="img/2.png" data-speed="5" alt="shape" class="layer">
+        <img src="img/3.png" data-speed="2" alt="shape" class="layer">
+        <img src="img/4.png" data-speed="6" alt="shape" class="layer">
+        <img src="img/5.png" data-speed="8" alt="shape" class="layer">
+        <img src="img/6.png" data-speed="-2" alt="shape" class="layer">
+        <img src="img/7.png" data-speed="4" alt="shape" class="layer">
+        <img src="img/8.png" data-speed="-9" alt="shape" class="layer">
+        <img src="img/9.png" data-speed="6" alt="shape" class="layer">
+        <img src="img/10.png" data-speed="-7" alt="shape" class="layer">
+        <img src="img/11.png" data-speed="-5" alt="shape" class="layer">
+        <img src="img/12.png" data-speed="-5" alt="shape" class="layer">
+        <h2 class="layer" data-speed="2">Hey there!</h2>
+        
+    </section>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove" , parallax);
+
+    function parallax (e){
+        this.querySelectorAll('.layer').forEach(layer => {
+        const speed = layer.getAttribute('data-speed')
+        
+        const x = (window,innerWidth - e.pageX*speed)/100
+        const y = (window,innerHeight - e.pageY*speed)/100
+
+        layer.style.transform = `translateX(${x}px) translateY(${y}px) `
+    
+    })
+}
+</script>
+
+<div class="section--2">
+    <div class="about" id="about">
+        <h3>Nomonjon Salokhiddinov</h3>
+        <div class="about--text">
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui veritatis dolor, architecto quod commodi pariatur nemo, odio ab corporis quae delectus consequatur iusto eaque aut sit iste, nobis doloremque placeat.
+            </p></div>
+            <div>
+                <img src="img/avatar.png" alt="avatar">
+            </div>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui veritatis dolor, architecto quod commodi pariatur nemo, odio ab corporis quae delectus consequatur iusto eaque aut sit iste, nobis doloremque placeat.
+            </p> </div>
+
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+    
+</body>
+</html>
